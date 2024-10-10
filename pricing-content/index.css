@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+body{
+    font-family: "Montserrat";
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    background-color: hsl(240, 78%, 98%);
+    justify-content: center;
+}
+
+.main{
+    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, bottom left;
+    background-size: 18rem, 15rem;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.title{
+    color:hsl(233, 13%, 49%);
+    margin-top: 2rem;
+}
+
+.switch{
+    height: 20px;
+    width: 170px;
+    color:hsl(234, 14%, 74%);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.toggle{
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    height: 22px;
+    width: 36px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.circle{
+    width: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    margin: 1px;
+}
+
+.pricing{
+    height: 20rem;
+    width: 48rem;
+    color: hsl(234, 14%, 74%);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 4rem;
+}
+
+.card-1{
+    width: 16rem;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.20);
+}
+
+.card-2{
+    height: 24rem;
+    width: 16rem;
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-3{
+    width: 16rem;
+    background-color: white;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.20);
+}
+
+.card-1-title-basic{
+    color:hsl(233, 13%, 49%);
+    width: 10rem;
+}
+
+.card-2-title-professional{
+    color: white;
+    width: 10rem;
+}
+
+.card-3-title-master{
+    color:hsl(233, 13%, 49%);
+    width: 10rem;
+}
+
+.basic{
+    color: hsl(233, 13%, 41%);
+    font-size: 40px;
+}
+
+.master{
+    color:hsl(233, 13%, 41%);
+    font-size: 40px;
+}
+
+h1{
+    font-size: 40px; 
+}
+
+.basic-learn-more{
+    background-color: hsl(237, 64%, 71%);
+    color: white;
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    margin-bottom: 1rem;
+}
+
+.prof-learn-more{
+    background-color: white;
+    color: hsl(237, 64%, 71%);
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 11px;
+    margin-bottom: 1rem;
+}
+
+.master-learn-more{
+    background-color: hsl(237, 64%, 71%);
+    color: white;
+    height: 2rem;
+    width: 10rem;
+    border: none;
+    font-size: 11px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
