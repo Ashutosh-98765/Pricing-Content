@@ -72,7 +72,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.19);
 }
 
 .card-2{
@@ -92,7 +92,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.19);
 }
 
 .card-1-title-basic{
