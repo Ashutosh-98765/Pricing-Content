@@ -1,67 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
-    <title>Pricing component</title>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
-    <div class="main">
-      <h2 class="title">Our Pricing</h2>
-      <div class="switch">
-        <span>Annually</span>
-        <span class="toggle"><span class="circle"></span></span>
-        <span>Monthly</span>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <title>Pricing component</title>
+
+  <link rel="stylesheet" href="./index.css">
+  <script src = "./index.js"></script>
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="wrapper">
+      <h1 class="title">Our Pricing</h1>
       <div class="pricing">
-        <div class="card-1">
-          <div class="card-1-title-basic">
-            <h3>Basic</h3>
-            <h1 class="basic">&dollar; 19.99</h1>
-            <hr />
-            <h5>500 GB Storage</h5>
-            <hr />
-            <h5>2 Users Allowed</h5>
-            <hr />
-            <h5>Send up to 3 GB</h5>
-            <button class="basic-learn-more">LEARN MORE</button>
-          </div>
+        <p>Annually</p>
+        <Label class="switch">
+          <input type="checkbox" id="toggle">
+          <span class="slider"></span>
+        </Label>
+        <p>Monthly</p>
+      </div>
+      <div class="pricing-main">
+        <div class="pricing-box">
+          <p class="box-title">Basic</p>
+          <p class="price-annually"> &dollar; <span class="price">199.99</span></p>
+          <p class="price-monthly"> &dollar; <span class="price">19.99</span></p>
+          <ul>
+            <li>500 GB Storage</li>
+            <li>2 Users Allowed</li>
+            <li>Send up to 3 GB</li>
+          </ul>
+          <a href="#">LEARN MORE</a>
         </div>
-        <div class="card-2">
-          <div class="card-2-title-professional">
-            <h3>Professional</h3>
-            <h1>&dollar; 24.99</h1>
-            <hr />
-            <h5>1 TB Storage</h5>
-            <hr />
-            <h5>5 Users Allowed</h5>
-            <hr />
-            <h5>Send up to 10 GB</h5>
-            <button class="prof-learn-more">LEARN MORE</button>
-          </div>
+        <div class="pricing-box active">
+          <p class="box-title">Professional</p>
+          <p class="price-annually"> &dollar; <span class="price">249.99</span></p>
+          <p class="price-monthly"> &dollar; <span class="price">24.99</span></p>
+          <ul>
+            <li>500 GB Storage</li>
+            <li>2 Users Allowed</li>
+            <li>Send up to 3 GB</li>
+          </ul>
+          <a href="#">LEARN MORE</a>
         </div>
-        <div class="card-3">
-          <div class="card-3-title-master">
-            <h3>Master</h3>
-            <h1 class="master">&dollar; 39.99</h1>
-            <hr />
-            <h5>2 TB Storage</h5>
-            <hr />
-            <h5>10 Users Allowed</h5>
-            <hr />
-            <h5>Send up to 20 GB</h5>
-            <button class="master-learn-more">LEARN MORE</button>
-          </div>
+        <div class="pricing-box">
+          <p class="box-title">Master</p>
+          <p class="price-annually"> $ <span class="price">399.99</span></p>
+          <p class="price-monthly"> $ <span class="price">39.99</span></p>
+          <ul>
+            <li>2 TB Storage</li>
+            <li>10 Users Allowed</li>
+            <li>Send up to 20 GB</li>
+          </ul>
+          <a href="#">LEARN MORE</a>
         </div>
       </div>
     </div>
-  </body>
+  </div>
+
+</body>
+
 </html>
+
