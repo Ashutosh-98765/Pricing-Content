@@ -1,158 +1,434 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
-body{
-    font-family: "Montserrat";
+body {
+    font-family: 'Montserrat';
     font-size: 15px;
     font-weight: 700;
-    display: flex;
-    background-color: hsl(240, 78%, 98%);
-    justify-content: center;
-}
-
-.main{
-    background-image: url("./images/bg-top.svg"), url("./images/bg-bottom.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: top right, bottom left;
-    background-size: 18rem, 15rem;
     height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
 }
 
-.title{
-    color:hsl(233, 13%, 49%);
-    margin-top: 2rem;
+.container {
+    width: auto;
+    margin: 0 auto;
 }
 
-.switch{
-    height: 20px;
-    width: 170px;
-    color:hsl(234, 14%, 74%);
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.wrapper {
+    text-align: center;
+    padding: 60px 20px;
 }
 
-.toggle{
-    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
-    height: 22px;
-    width: 36px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: flex-end;
+.title {
+    font-size: 32px;
+    color: hsl(233, 13%, 49%);
+
 }
 
-.circle{
-    width: 1rem;
+.switch input {
+    display: none;
+}
+
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    background: linear-gradient(180deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%));
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 35px;
+}
+
+.slider:hover {
+    background: hsl(234, 14%, 74%)
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
     background-color: white;
-    border-radius: 10px;
-    margin: 1px;
+    transition: .4s;
 }
 
-.pricing{
-    height: 20rem;
-    width: 48rem;
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.pricing {
     color: hsl(234, 14%, 74%);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    padding: 48px 0;
+}
+
+.pricing label {
+    margin: 0 20px;
+}
+
+.pricing-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.pricing-box {
+    background-color: #fff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    align-self: center;
+    width: 450px;
+}
+
+.box-title {
+    color: hsl(233, 13%, 49%);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.price-monthly,
+.price-annually {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: hsl(232, 13%, 33%);
+}
+
+.price-monthly {
+    display: none;
+}
+
+.price {
+    font-size: 65px;
+    padding-left: 7px;
+}
+
+ul {
+    list-style: none;
+    padding: 35px 0px;
+}
+
+ul li {
+    color: hsl(233, 13%, 49%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    padding: 18px 0;
+}
+
+ul li:first-child {
+    border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+a {
+    border: none;
+    background: linear-gradient(180deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%));
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 7px;
+    color: white;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+a:hover {
+    color: hsl(232, 13%, 33%);
+    background: transparent;
+    border-color: hsl(232, 13%, 33%)
+}
+
+
+.pricing-box.active {
+    background: linear-gradient(180deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%));
+    padding: 80px 40px;
+}
+
+.pricing-box.active p {
+    color: #FFF;
+}
+
+.pricing-box.active ul li {
+    color: #FFF;
+}
+
+.pricing-box.active a {
+    background: #FFF;
+    color: hsl(237, 63%, 64%);
+}
+
+.pricing-box.active a:hover {
+    color: #FFF;
+    border-color: #FFF;
+    background: transparent;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: 700;
+    height: 100vh;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right top, left bottom;
+}
+
+.container {
+    width: auto;
+    margin: 0 auto;
+}
+
+.wrapper {
     text-align: center;
-    margin: 4rem;
+    padding: 60px 20px;
 }
 
-.card-1{
-    width: 16rem;
+.title {
+    font-size: 32px;
+    color: hsl(233, 13%, 49%);
+
+}
+
+.switch input {
+    display: none;
+}
+
+.switch {
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    position: relative;
+    cursor: pointer;
+}
+
+.slider {
+    position: absolute;
+    background: linear-gradient(180deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%));
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 35px;
+}
+
+.slider:hover {
+    background: hsl(234, 14%, 74%)
+}
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
     background-color: white;
-    border-radius: 6px;
+    transition: .4s;
+}
+
+input:checked+.slider::before {
+    transform: translateX(26px);
+}
+
+.pricing {
+    color: hsl(234, 14%, 74%);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.19);
+    padding: 48px 0;
 }
 
-.card-2{
-    height: 24rem;
-    width: 16rem;
-    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
-    border-radius: 6px;
+.pricing label {
+    margin: 0 20px;
+}
+
+.pricing-main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.card-3{
-    width: 16rem;
-    background-color: white;
-    border-radius: 6px;
+.pricing-box {
+    background-color: #fff;
+    padding: 50px 40px;
+    border-radius: 12px;
+    align-self: center;
+    width: 450px;
+}
+
+.box-title {
+    color: hsl(233, 13%, 49%);
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.price-monthly,
+.price-annually {
     display: flex;
-    justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.19);
+    justify-content: center;
+    font-size: 32px;
+    color: hsl(232, 13%, 33%);
 }
 
-.card-1-title-basic{
-    color:hsl(233, 13%, 49%);
-    width: 10rem;
+.price-monthly {
+    display: none;
 }
 
-.card-2-title-professional{
-    color: white;
-    width: 10rem;
+.price {
+    font-size: 65px;
+    padding-left: 7px;
 }
 
-.card-3-title-master{
-    color:hsl(233, 13%, 49%);
-    width: 10rem;
+ul {
+    list-style: none;
+    padding: 35px 0px;
 }
 
-.basic{
-    color: hsl(233, 13%, 41%);
-    font-size: 40px;
+ul li {
+    color: hsl(233, 13%, 49%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    padding: 18px 0;
 }
 
-.master{
-    color:hsl(233, 13%, 41%);
-    font-size: 40px;
+ul li:first-child {
+    border-top: 1px solid hsl(234, 14%, 74%);
 }
 
-h1{
-    font-size: 40px; 
-}
-
-.basic-learn-more{
-    background-color: hsl(237, 64%, 71%);
-    color: white;
-    height: 2rem;
-    width: 10rem;
+a {
     border: none;
-    border-radius: 6px;
-    font-size: 11px;
-    margin-bottom: 1rem;
-}
-
-.prof-learn-more{
-    background-color: white;
-    color: hsl(237, 64%, 71%);
-    height: 2rem;
-    width: 10rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 11px;
-    margin-bottom: 1rem;
-}
-
-.master-learn-more{
-    background-color: hsl(237, 64%, 71%);
+    background: linear-gradient(180deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%));
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    border-radius: 7px;
     color: white;
-    height: 2rem;
-    width: 10rem;
-    border: none;
-    font-size: 11px;
-    border-radius: 6px;
-    margin-bottom: 1rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border: 1px solid transparent;
 }
+
+a:hover {
+    color: hsl(232, 13%, 33%);
+    background: transparent;
+    border-color: hsl(232, 13%, 33%)
+}
+
+
+.pricing-box.active {
+    background: linear-gradient(180deg,
+            hsl(236, 72%, 79%),
+            hsl(237, 63%, 64%));
+    padding: 80px 40px;
+}
+
+.pricing-box.active p {
+    color: #FFF;
+}
+
+.pricing-box.active ul li {
+    color: #FFF;
+}
+
+.pricing-box.active a {
+    background: #FFF;
+    color: hsl(237, 63%, 64%);
+}
+
+.pricing-box.active a:hover {
+    color: #FFF;
+    border-color: #FFF;
+    background: transparent;
+}
+
+
+@media (min-width: 350px) and (max-width: 768px) {   
+    .pricing-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .price {
+        font-size: 45px;
+    }
+
+    .pricing-box {
+        width: auto;
+        padding: 40px 20px;
+    }
+
+    .pricing-box.active {
+        transform: scaleX(1);
+        padding: 50px 30px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .pricing-main {
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .price {
+        font-size: 45px;
+    }
+
+    .pricing-box.active {
+        transform: scaleX(1);
+        padding: 90px 50px;
+    }
+
+    .pricing-box {
+        width: 100%;
+        padding: 70px 50px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
+
